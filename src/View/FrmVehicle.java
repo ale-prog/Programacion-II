@@ -8,19 +8,25 @@ package View;
 import ViewPanels.DialogVehicle;
 import java.awt.event.ActionListener;
 import javax.swing.JMenuItem;
-
+import ViewPanels.IntFrmVehicle;
+import javax.swing.JDesktopPane;
+import javax.swing.JFrame;
+import javax.swing.JInternalFrame;
+import javax.swing.WindowConstants;
 /**
  *
  * @author JADPA03
  */
 public class FrmVehicle extends javax.swing.JFrame {
-   private int countTab;
    private DialogVehicle dialogVehicle;
+  
+   
+ 
     /**
      * Creates new form FrmVehicle
      */
     public FrmVehicle() {
-       countTab=1;
+       
         initComponents();
     }
 
@@ -35,7 +41,7 @@ public class FrmVehicle extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        DesktopPane = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         MniNew = new javax.swing.JMenuItem();
@@ -45,22 +51,22 @@ public class FrmVehicle extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        javax.swing.GroupLayout DesktopPaneLayout = new javax.swing.GroupLayout(DesktopPane);
+        DesktopPane.setLayout(DesktopPaneLayout);
+        DesktopPaneLayout.setHorizontalGroup(
+            DesktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 475, Short.MAX_VALUE)
         );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+        DesktopPaneLayout.setVerticalGroup(
+            DesktopPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jDesktopPane1, java.awt.BorderLayout.CENTER);
+        getContentPane().add(DesktopPane, java.awt.BorderLayout.CENTER);
 
         jMenu1.setText("File");
 
-        MniNew.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
+        MniNew.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         MniNew.setText("New");
         MniNew.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,7 +75,7 @@ public class FrmVehicle extends javax.swing.JFrame {
         });
         jMenu1.add(MniNew);
 
-        MniView.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
+        MniView.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         MniView.setText("View");
         MniView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,7 +84,7 @@ public class FrmVehicle extends javax.swing.JFrame {
         });
         jMenu1.add(MniView);
 
-        MniQuit.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_MASK));
+        MniQuit.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         MniQuit.setText("Quit");
         jMenu1.add(MniQuit);
 
@@ -89,7 +95,8 @@ public class FrmVehicle extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar1);
 
-        pack();
+        setSize(new java.awt.Dimension(491, 539));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void MniNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MniNewActionPerformed
@@ -98,7 +105,14 @@ public class FrmVehicle extends javax.swing.JFrame {
     }//GEN-LAST:event_MniNewActionPerformed
 
     private void MniViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MniViewActionPerformed
-        // TODO add your handling code here:
+       
+        IntFrmVehicle internal = new IntFrmVehicle();
+        FrmVehicle frmVehicle = new FrmVehicle();
+       
+        DesktopPane.add(internal);
+        
+
+		internal.setVisible(true);
     }//GEN-LAST:event_MniViewActionPerformed
 
     /**
@@ -137,10 +151,10 @@ public class FrmVehicle extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDesktopPane DesktopPane;
     private javax.swing.JMenuItem MniNew;
     private javax.swing.JMenuItem MniQuit;
     private javax.swing.JMenuItem MniView;
-    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
