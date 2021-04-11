@@ -1,14 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package ViewPanels;
 
-/**
- *
- * @author JADPA03
- */
+package uni.ViewPanels;
+
+import javax.swing.JButton;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+
+
 public class IntFrmVehicle extends javax.swing.JInternalFrame {
 
     /**
@@ -16,6 +13,42 @@ public class IntFrmVehicle extends javax.swing.JInternalFrame {
      */
     public IntFrmVehicle() {
         initComponents();
+    }
+
+    public JTable getTblViewVehicle() {
+        return TblViewVehicle;
+    }
+
+    public JButton getBtnDelete() {
+        return BtnDelete;
+    }
+
+    public void setBtnDelete(JButton BtnDelete) {
+        this.BtnDelete = BtnDelete;
+    }
+
+    public JButton getBtnNew() {
+        return BtnNew;
+    }
+
+    public void setBtnNew(JButton BtnNew) {
+        this.BtnNew = BtnNew;
+    }
+
+    public JButton getBtnUpdate() {
+        return BtnUpdate;
+    }
+
+    public void setBtnUpdate(JButton BtnUpdate) {
+        this.BtnUpdate = BtnUpdate;
+    }
+
+    public JTextField getTxtFind() {
+        return TxtFind;
+    }
+
+    public void setTxtFind(JTextField TxtFind) {
+        this.TxtFind = TxtFind;
     }
 
     /**
@@ -34,7 +67,7 @@ public class IntFrmVehicle extends javax.swing.JInternalFrame {
         BtnDelete = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        TblViewVehicle = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         TxtFind = new javax.swing.JTextField();
@@ -54,7 +87,7 @@ public class IntFrmVehicle extends javax.swing.JInternalFrame {
 
         jPanel4.setLayout(new java.awt.GridBagLayout());
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        TblViewVehicle.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -62,8 +95,8 @@ public class IntFrmVehicle extends javax.swing.JInternalFrame {
 
             }
         ));
-        jTable2.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
-        jScrollPane2.setViewportView(jTable2);
+        TblViewVehicle.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_OFF);
+        jScrollPane2.setViewportView(TblViewVehicle);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
@@ -110,12 +143,12 @@ public class IntFrmVehicle extends javax.swing.JInternalFrame {
     private javax.swing.JButton BtnDelete;
     private javax.swing.JButton BtnNew;
     private javax.swing.JButton BtnUpdate;
+    private javax.swing.JTable TblViewVehicle;
     private javax.swing.JTextField TxtFind;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable2;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,22 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package View;
 
-import ViewPanels.DialogVehicle;
+package uni.View;
+
+import uni.ViewPanels.DialogVehicle;
 import java.awt.event.ActionListener;
 import javax.swing.JMenuItem;
-import ViewPanels.IntFrmVehicle;
+import uni.ViewPanels.IntFrmVehicle;
 import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.WindowConstants;
-/**
- *
- * @author JADPA03
- */
+
 public class FrmVehicle extends javax.swing.JFrame {
    private DialogVehicle dialogVehicle;
   

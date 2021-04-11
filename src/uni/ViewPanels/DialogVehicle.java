@@ -1,9 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package ViewPanels;
+
+package uni.ViewPanels;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -11,10 +7,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JSpinner;
 import javax.swing.JTextField;
 
-/**
- *
- * @author JADPA03
- */
+
 public class DialogVehicle extends javax.swing.JDialog {
 
     /**
@@ -37,6 +30,7 @@ public class DialogVehicle extends javax.swing.JDialog {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
+        BtnGroup = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         BtnSave = new javax.swing.JButton();
         BtnCancel = new javax.swing.JButton();
@@ -300,6 +294,8 @@ public class DialogVehicle extends javax.swing.JDialog {
         gridBagConstraints.insets = new java.awt.Insets(3, 25, 3, 26);
         jPanel2.add(jLabel11, gridBagConstraints);
 
+        BtnGroup.add(RbAutomatic);
+        RbAutomatic.setSelected(true);
         RbAutomatic.setText("Automatic");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -311,6 +307,7 @@ public class DialogVehicle extends javax.swing.JDialog {
         gridBagConstraints.insets = new java.awt.Insets(3, 34, 3, 38);
         jPanel2.add(RbAutomatic, gridBagConstraints);
 
+        BtnGroup.add(RbManual);
         RbManual.setText("Manual");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -401,6 +398,18 @@ public class DialogVehicle extends javax.swing.JDialog {
     private void TxtStyleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtStyleActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtStyleActionPerformed
+
+    public JSpinner getSpnPrice() {
+        return SpnPrice;
+    }
+
+    public JButton getBtnBrowse() {
+        return BtnBrowse;
+    }
+
+    public void setBtnBrowse(JButton BtnBrowse) {
+        this.BtnBrowse = BtnBrowse;
+    }
 
     public JButton getBtnCancel() {
         return BtnCancel;
@@ -586,6 +595,7 @@ public class DialogVehicle extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnBrowse;
     private javax.swing.JButton BtnCancel;
+    private javax.swing.ButtonGroup BtnGroup;
     private javax.swing.JButton BtnSave;
     private javax.swing.JComboBox<String> CmbEcolor;
     private javax.swing.JComboBox<String> CmbIcolor;

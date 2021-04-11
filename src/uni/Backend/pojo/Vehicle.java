@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Backend.pojo;
 
-/**
- *
- * @author yasser.membreno
- */
+package uni.Backend.pojo;
+
+
 public class Vehicle {
     private int stockNumber;//20
     private int year;//4

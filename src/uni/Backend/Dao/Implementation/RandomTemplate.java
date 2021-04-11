@@ -1,18 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Backend.Dao.Implementation;
+
+package uni.Backend.Dao.Implementation;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/**
- *
- * @author yasser.membreno
- */
+
 public abstract class RandomTemplate {
 
     private File fileHead;
